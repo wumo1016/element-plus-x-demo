@@ -22,4 +22,10 @@ dist-ssr
 *.sln
 *.sw?
 
+# 自定生成的声明文件
+components.d.ts
+auto-imports.d.ts
 
+
+# 私有配置
+_config.ts
