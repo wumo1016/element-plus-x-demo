@@ -5,6 +5,8 @@
  * @LastEditTime: 2025-05-15 10:14:10
  */
 import { createApp } from 'vue'
+import './styles/index.scss'
+
 import App from './App.vue'
 
 //引入路由

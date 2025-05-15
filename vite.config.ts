@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
     server: {
       open: false,
       host: '0.0.0.0',
-      port: 6001,
+      port: 9001,
       cors: true,
       headers: {
         'Access-Control-Allow-Origin': '*'
