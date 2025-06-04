@@ -2,11 +2,17 @@
  * @Description: 
  * @Author: wyb
  * @LastEditors: wyb
- * @LastEditTime: 2025-06-03 16:00:06
+ * @LastEditTime: 2025-06-04 17:08:00
 -->
 <template>
   <div class="home">
-    <Typewriter :content="content" is-markdown :md-plugins="mdPlugins" :highlight="highlight" />
+    <Typewriter
+      :content="content"
+      is-markdown
+      :md-plugins="mdPlugins"
+      :typing="false && { step: 5, interval: 67, suffix: '|' }"
+      :highlight="highlight"
+    />
   </div>
 </template>
 
@@ -32,9 +38,9 @@ const content = ref('')
 const mdPlugins: MarkdownItPlugin[] = [md => mk(md, {})]
 
 onMounted(async () => {
-  // fetch('/test.txt').then(async res => {
-  fetch('/mermaid.txt').then(async res => {
-  // fetch('/mathjax.txt').then(async res => {
+  fetch('/test.txt').then(async res => {
+  // fetch('/mermaid.txt').then(async res => {
+    // fetch('/mathjax.txt').then(async res => {
     const data = await res.text()
     content.value = data
   })
